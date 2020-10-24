@@ -48,52 +48,7 @@
 		<div class="container" style="min-height: 700px;">
 			<div class="card" style="margin-top: 50px; min-height: 650px;">
 				<div class="card-body">
-					<div class="text-center mt-3">
-						<h1>Bienvenidos!!</h1>
-					</div>
-					<div class="text-center mt-5">
-						<p>Seleccionen las tarjetas de abajo para ver "fun facts" sore mi!</p>
-					</div>
-					<div class="row" style="padding-top: 150px;">
-						<div class="col">
-							<div class="card" id="ff1">
-								<a href= "#" v-on:click="isHidden = !isHidden" class="btn btn-primary funfact">Func Fact 1</a>
-								<p v-if="!isHidden" class="card-text text-center funfact" >Soy zurdo!</p>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card" id="ff2">
-								<a href= "#" v-on:click="isHidden = !isHidden" class="btn btn-secondary funfact">Func Fact 2</a>
-								<p v-if="!isHidden" class="card-text text-center funfact">Me encanta la musica.</p>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card" id="ff3">
-								<a href= "#" v-on:click="isHidden = !isHidden" class="btn btn-warning funfact">Func Fact 3</a>
-								<p v-if="!isHidden" class="card-text text-center funfact">No me gusta el queso.</p>
-							</div>
-						</div>
-					</div>
-					<div class="row" style="padding-top: 100px;">
-						<div class="col">
-							<div class="card" id="ff4">
-								<a href= "#" v-on:click="isHidden = !isHidden"  class="btn btn-success funfact">Func Fact 4</a>
-								<p v-if="!isHidden" class="card-text text-center funfact">He trabajado en Google y Facebook!</p>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card" id="ff5">
-								<a href= "#" v-on:click="isHidden = !isHidden" class="btn btn-danger funfact">Func Fact 5</a>
-								<p v-if="!isHidden" class="card-text text-center funfact">Soy el menor de 3.</p>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card" id="ff6">
-								<a href= "#" v-on:click="isHidden = !isHidden" class="btn btn-dark funfact">Func Fact 6</a>
-								<p v-if="!isHidden" class="card-text text-center funfact">He ido a Estonia!</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			  </div>
 		</div>
@@ -104,43 +59,5 @@
 			</div>
 		</footer>
 		<!-- Footer -->
-	<script>
-		 var ff1 = new Vue({
-			el: '#ff1',
-			data: {
-			isHidden: true
-			}
-		});
-		var ff2 = new Vue({
-			el: '#ff2',
-			data: {
-			isHidden: true
-			}
-		});
-		var ff3 = new Vue({
-			el: '#ff3',
-			data: {
-			isHidden: true
-			}
-		});
-		var ff4 = new Vue({
-			el: '#ff4',
-			data: {
-			isHidden: true
-			}
-		});
-		var ff5 = new Vue({
-			el: '#ff5',
-			data: {
-			isHidden: true
-			}
-		});
-		var ff6 = new Vue({
-			el: '#ff6',
-			data: {
-			isHidden: true
-			}
-		});
-	</script>
 	</body>
 </html> 

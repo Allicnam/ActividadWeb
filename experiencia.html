@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 6769 </title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+		<style>
+			#navfoot {background-color: rgb(67, 87, 82);}
+			.bl { border-left: 3px solid black; }
+		</style>
+    </head>
+    <body style="background-color: rgb(135, 170, 161); padding-top: 130px;">
+		<!-- BookStore NavBar -->
+		<header>
+			<nav class="navbar fixed-top navbar-expand-lg navbar-light pink scrolling-navbar" id="navfoot">
+			  <a class="navbar-brand" href="#">
+				<img src="2.jpeg" width="200" height="100" class="d-inline-block align-top" alt="" />
+			  </a>
+			  <h1>Adrian Mancilla</h1>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <ul class="navbar-nav w-50 ml-auto">
+				<li class="nav-item active flex-fill text-center">
+				  <a class="nav-link" href="index.html"><h5>Pagina Principal</h5> <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item flex-fill text-center">
+				  <a class="nav-link" href="experiencia.html"><h5>Experiencia Laboral</h5></a>
+				</li>
+				<li class="nav-item flex-fill text-center">
+				  <a class="nav-link" href="educacion.html"><h5>Educación</h5></a>
+				</li>
+				<li class="nav-item flex-fill text-center">
+				  <a class="nav-link" href="hobbies.html"><h5>Hobbies</h5></a>
+				</li>
+				<li class="nav-item flex-fill text-center">
+					<a class="nav-link" href="contacto.html"><h5>Contacto</h5></a>
+				  </li>
+			  </ul>
+			</nav>
+		</header>
+		<!-- BookStore NavBar -->
+		<div class="container" style="min-height: 700px;">
+			<div class="card" style="margin-top: 50px; min-height: 650px;">
+				<div class="card-body">
+                    <div class="conainer">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row align-items-start ml-5">
+                                    <h1>Facebook Inc. Internship</h1>
+                                </div>
+                                <div class="row align-items-center mt-3" style="margin-left: 100px;">
+                                    <ul>
+                                        <li>
+                                            Developed a command-line tool that allows users to query through an AWS DynamoDB database and displays results for the Consumer Payments Foundation team.
+                                        </li>
+                                        <li>
+                                            Implemented various features such as: filtering, decryption/encryption, pagination and querying different tables.
+                                        </li>
+                                        <li>
+                                            Worked on allow and blocklisting functionality of sensitive data in logging for the same team.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-3 align-self-center bl pt-5 pb-5">
+                                <a href="#" class="btn btn-outline-primary ml-5" data-toggle="modal" data-target="#modal1">Ver mas</a>
+                            </div>
+                            <hr class="w-100" style="height: 2px; border: none; background-color: gray;"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row align-items-start ml-5">
+                                    <h1>Google Internship</h1>
+                                </div>
+                                <div class="row align-items-center mt-3" style="margin-left: 100px;">
+                                    <ul>
+                                        <li>
+                                            Implemented a VS Code extension that allows Kubernetes developers to browse and diagnose logs related to their projects in their IDE.
+                                        </li>
+                                        <li>
+                                            Simplified user experience by reducing context switching and providing users with real-time log analysis.
+                                        </li>
+                                        <li>
+                                            Implemented primarily backend functionality, that included Stackdriver API wrappers, filtering functionality, dropdown updates, event handling, and more.
+                                        </li>
+                                        <li>
+                                            Wrote unit tests with Typemoq library.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-3 align-self-center bl pt-5 pb-5">
+                                <a href="#" class="btn btn-outline-primary ml-5" data-toggle="modal" data-target="#modal2">Ver mas</a>
+                            </div>
+                            <hr class="w-100" style="height: 2px; border: none; background-color: gray;"/>
+                        </div> 
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row align-items-start ml-5">
+                                    <h1>TechMake Solutions S.A de C.V</h1>  
+                                </div>
+                                <div class="row align-items-center mt-3" style="margin-left: 100px;">
+                                    <ul>
+                                        <li>
+                                            Developed a machine monitoring full-stack web project in a team of 3, a system for any number of enterprises. 
+                                        </li>
+                                        <li>
+                                            Implemented functionality for users and administrators, location tracking, predictions of malfunctions through machine learning, task manager, and more.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-3 align-self-center bl pt-5 pb-5">
+                                <a href="#" class="btn btn-outline-primary ml-5" data-toggle="modal" data-target="#modal3">Ver mas</a>
+                            </div>
+                        </div> 
+                    </div>					
+				</div>
+			</div>
+        </div>
+        <!-- Modal1 -->
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Dates: June 2020 – August 2020 </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Tools used: C++, AWS, DynamoDB API.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal1 -->
+         <!-- Modal2 -->
+         <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel2">Dates: May 2019 – August 2019 </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Tools used: Google Stackdriver Logging API, AngularJS, and Typescript.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal2 -->
+         <!-- Modal3 -->
+         <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel3">Dates: April 2018 – January 2019 </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Tools used: HTML, JavaScript, PHP, SQL, and hardware implementations of Raspberry Pi, Arduino, and Python.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal3 -->
+		<!-- Footer -->
+		<footer class="page-footer font-small" style="margin-top: 20px;" id="navfoot">
+			<div class="footer-copyright text-center py-3">
+			  Adrian Mancilla A01196967 
+			</div>
+		</footer>
+		<!-- Footer -->
+	</body>
+</html> 
