@@ -10,15 +10,16 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
         <script>
-
+            /*
             const axios = require('axios');
 
             axios.get('/experiencia').then(resp => {
 
                 console.log(resp.data);
-            });
-            /*
+            });*/
+            
             fetch('/experiencia')
+            then((resp) => resp.json())
             .then(
                 function(response) {
                 if (response.status !== 200) {
@@ -31,12 +32,12 @@
                     response.json().then(function(data) {
                         console.log(data);
                     });
-                    $("#exp1").text(response[0].texto1);
+                    //$("#exp1").text(response[0].texto1);
                 }
             }).catch(function(err) {
                 console.log('Fetch Error :-S', err);
             });
-            */
+            
         </script>
 		<style>
 			#navfoot {background-color: rgb(67, 87, 82);}
