@@ -18,7 +18,7 @@ const Experiencia = mongoose.model("exp", schema);
   
 var app = express();
 
-app.get("/experiencia.html", (req, res) => {
+app.get("/experiencia", (req, res) => {
     
     Experiencia.find({}, (err, doc) => {
     if (err) throw err;
