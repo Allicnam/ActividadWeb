@@ -1,29 +1,31 @@
 const express = require('express');
-const mysql = require('mysql');
+const mongoose = require('mongoose');
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  port: 3000,
+
+mongoose
+  .connect('mongodb+srv://Adrian:allicnam@cluster0.ac1lu.mongodb.net/Curriculum?retryWrites=true&w=majority', {useNewUrlParser: true})
+  .then(() => console.log("Connected to MongoDB..."))
+  .catch((err) => console.error("Error", err));
+ 
+const schema = mongoose.Schema({
+  title : String,
+  texto1 : String,
+  texto2 : String,
+  texto3 : String,
+  texto4 : String
 });
+const Experiencia = mongoose.model("exp", schema);
+  
+var app = express();
 
-db.connect((err) => {
-  if (err) throw err;
-  console.log('Connected!');
-});
-
-const app = express();
-
-app.get('/createdb', (req, res) => {
-    let sql = 'CREATE DATABASE nodemysql';
-    db.query(sql, (err, result) => {
-        if (err) throw err;
-        console.log(result);
-        res.send('Database created...');
+app.get("/experiencia.html", (req, res) => {
+    
+    Experiencia.find({}, (err, doc) => {
+    if (err) throw err;
+    res.status(200).send(doc);
     });
 });
 
-app.listen('3000', () => {
-    console.log('Sever started on port 3000');
-});
+app.listen(8082, function () {
+    console.log("Listening on port 8082!");
+  });
