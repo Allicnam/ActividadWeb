@@ -11,6 +11,13 @@
 
         <script>
 
+            const axios = require('axios');
+
+            axios.get('/experiencia').then(resp => {
+
+                console.log(resp.data);
+            });
+            /*
             fetch('/experiencia')
             .then(
                 function(response) {
@@ -29,7 +36,7 @@
             }).catch(function(err) {
                 console.log('Fetch Error :-S', err);
             });
-
+            */
         </script>
 		<style>
 			#navfoot {background-color: rgb(67, 87, 82);}
