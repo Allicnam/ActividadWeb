@@ -48,10 +48,39 @@
 		<div class="container" style="min-height: 700px;">
 			<div class="card" style="margin-top: 50px; min-height: 650px;">
 				<div class="card-body">
-					
+					<div class="row ml-5">
+						<h2>
+							Contactame!
+						</h2>
+					</div>
+					<form>
+						<div class="row mt-5">
+							<div class="col-6"> 
+								<div class="form-group">
+									<label for="exampleInputEmail1">Nombre</label>
+									<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
+								  </div>
+							</div>
+							<div class="col-6"> 
+								<div class="form-group">
+									<label for="exampleInputPassword1">Apellido</label>
+									<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido">
+								  </div>
+							</div>
+						</div>
+						<div class="form-group mt-3">
+							<label for="exampleInputEmail1">Email</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+						  </div>
+						<div class="form-group mt-5">
+							<label for="exampleFormControlTextarea1">Escribe un mensaje</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje"></textarea>
+						  </div>
+						<button id="enviarMensaje" type="submit" v-on:click="showAlert" class="btn btn-primary float-right mt-5">Enviar Mensaje</button>
+					  </form>
 				</div>
 			  </div>
-		</div>
+		</div>	
 		<!-- Footer -->
 		<footer class="page-footer font-small" style="margin-top: 20px;" id="navfoot">
 			<div class="footer-copyright text-center py-3">
@@ -59,5 +88,15 @@
 			</div>
 		</footer>
 		<!-- Footer -->
+		<script>
+			var enviarMensaje = new Vue({
+			   el: '#enviarMensaje',
+			   methods: {
+				showAlert: () => {
+				alert('Se mando un correo a Adrian Mancilla con el mensaje')
+				}
+			}
+		   });
+	   </script>
 	</body>
 </html> 
