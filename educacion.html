@@ -2,12 +2,32 @@
 <html>
     <head>
         <title> 6769 </title>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script
+		src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+		crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+		<script>
+
+            $.get("http://localhost:8082/clases", function (data) {
+                console.log("Data:"+data)
+				
+				$("#clases1").append("<li>"+data[0].texto1 + "</li>");
+				$("#clases1").append("<li>"+data[0].texto2 + "</li>");
+				
+				$("#clases2").append("<li>"+data[1].texto1 + "</li>");
+				$("#clases2").append("<li>"+data[1].texto2 + "</li>");
+
+				$("#clases3").append("<li>"+data[2].texto1 + "</li>");
+				$("#clases3").append("<li>"+data[2].texto2 + "</li>");
+            });
+                        
+		</script>
 
 		<style>
 			#navfoot {background-color: rgb(67, 87, 82);}
@@ -66,33 +86,18 @@
 								</h6>
 								<div class="row">
 									<div class="col-3">
-										<ul>
-											<li>
-												Data Structures
-											</li>
-											<li>
-												Object Oriented Programming
-											</li>
+										<ul id="clases1">
+											
 										</ul>
 									</div>
 									<div class="col-3">
-										<ul>
-											<li>
-												Linear Algebra
-											</li>
-											<li>
-												Algorithm design
-											</li>
+										<ul	id="clases2">
+											
 										</ul>
 									</div>
 									<div class="col-3">
-										<ul>
-											<li>
-												Network Design
-											</li>
-											<li>
-												Databases
-											</li>
+										<ul id="clases3">
+											
 										</ul>
 									</div>
 								</div>

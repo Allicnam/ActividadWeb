@@ -1,31 +1,54 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require("express"); 
+const mongodb = require("mongodb");
+
+const port = 8082; 
+
+const app = express(); 
+app.use(require("cors")()); 
+app.use(require("body-parser").json()); 
+
+const uri = "mongodb://Adrian:allicnam@cluster0-shard-00-00.ac1lu.mongodb.net:27017,cluster0-shard-00-01.ac1lu.mongodb.net:27017,cluster0-shard-00-02.ac1lu.mongodb.net:27017/Curriculum?ssl=true&replicaSet=atlas-114utf-shard-0&authSource=admin&retryWrites=true&w=majority"; // put your URI HERE
 
 
-mongoose
-  .connect('mongodb+srv://Adrian:allicnam@cluster0.ac1lu.mongodb.net/Curriculum?retryWrites=true&w=majority', {useNewUrlParser: true})
-  .then(() => console.log("Connected to MongoDB..."))
-  .catch((err) => console.error("Error", err));
- 
-const schema = mongoose.Schema({
-  title : String,
-  texto1 : String,
-  texto2 : String,
-  texto3 : String,
-  texto4 : String
-});
-const Experiencia = mongoose.model("exp", schema);
-  
-var app = express();
+mongodb.MongoClient.connect(uri, (err, db) => {
 
-app.get("/experiencia", (req, res) => {
-    
-    Experiencia.find({}, (err, doc) => {
-    if (err) throw err;
-    res.status(200).send(doc);
+    const collection = db.collection("exps");
+
+  app.get("/experiencia", (req, res) => {
+
+    collection.find({ title: "experiencia" }).toArray((err, docs) => {
+      if (err) {
+        res.send("Error in GET req.");
+      } else {
+        res.send(docs);
+      }
     });
-});
-
-app.listen(8082, function () {
-    console.log("Listening on port 8082!");
   });
+
+  app.get("/hobbies", (req, res) => {
+
+    collection.find({ title: "hobbies" }).toArray((err, docs) => {
+      if (err) {
+        res.send("Error in GET req.");
+      } else {
+        res.send(docs); 
+      }
+    });
+  });
+
+  app.get("/clases", (req, res) => {
+
+    collection.find({ title: "clases" }).toArray((err, docs) => {
+      if (err) {
+        res.send("Error in GET req.");
+      } else {
+        res.send(docs);
+      }
+    });
+  });
+
+  // listen for requests
+  var listener = app.listen(port, () => {
+    console.log("Your app is listening on port " + listener.address().port);
+  });
+});
